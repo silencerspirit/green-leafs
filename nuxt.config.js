@@ -11,6 +11,7 @@ module.exports = {
    */
   plugins: [
     '~/plugins/fireinit',
+    '~/plugins/element-ui'
   ],
   head: {
     title: "Green-leafs",
@@ -34,22 +35,20 @@ module.exports = {
       },
       {
         rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|PT+Sans:400,700&amp;subset=cyrillic'
+      },
+      {
+        rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
       }
     ]
   },
   /*
    ** Customize the progress bar color
    */
-  loading: {
-    color: "#3B8070"
-  },
+  loading: '~/components/loading.vue',
   /*
    ** Build configuration
    */
   build: {
-    vendor: [
-      'firebase'
-    ],
     extend(config, {
       isDev
     }) {
